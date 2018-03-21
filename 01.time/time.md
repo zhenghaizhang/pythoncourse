@@ -99,16 +99,17 @@
 * tzname – 关于(标准时区名称, 夏令时时区名称)的元组
 * tzset() – 改变本地时区。
 
-三种日期格式的转换方式，及获取方法
-时间戳：time.time() # 获取本地时间戳
-元组：time.localtime() # 获取本地时间
-time.gmtime()  # 获取UTC时间
-根据日期字符串获取时间元组time.strptime("2018-03-21", '%Y-%m-%d')
-根据日期字符串获取时间元组，再返回人类友好时间time.strftime('%Y-%m-%d',time.strptime("2018-03-21", '%Y-%m-%d'))
+## 三种日期格式的转换方式，及获取方法
+* 时间戳：time.time() # 获取本地时间戳
+* 元组：
+  * time.localtime() # 获取本地时间
+  * time.gmtime()  # 获取UTC时间
+* 根据日期字符串获取时间元组time.strptime("2018-03-21", '%Y-%m-%d')
+* 根据日期字符串获取时间元组，再返回人类友好时间
+  * time.strftime('%Y-%m-%d',time.strptime("2018-03-21", '%Y-%m-%d'))
+* 获取格式化时间
+  * time.asctime()
+  * time.asctime(res) # res为一个时间元组，可通过time.localtime()获取
+  * time.strftime('%Y-%m-%d %X',time.localtime())
 
-获取格式化时间
-time.asctime()
-time.asctime(res) # res为一个时间元组，可通过time.localtime()获取
-time.strftime('%Y-%m-%d %X',time.localtime())
-
-time搞定日期时间变换
+# time搞定日期时间变换
