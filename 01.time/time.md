@@ -111,5 +111,6 @@
   * time.asctime()
   * time.asctime(res) # res为一个时间元组，可通过time.localtime()获取
   * time.strftime('%Y-%m-%d %X',time.localtime())
-
+* 根据时间元组获取时间戳
+  * time.mktime(res)  #res = time.strptime("2018-03-21", '%Y-%m-%d')
 # time搞定日期时间变换
